@@ -1,0 +1,268 @@
+using System;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp2
+{
+    static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());  // Form1 başlatılıyor
+        }
+    }
+}
+
+
+
+
+namespace WindowsFormsApp2
+{
+    partial class Form1
+    {
+        private System.ComponentModel.IContainer components = null;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer üretilen kod
+
+        private void InitializeComponent()
+        {
+            this.txtEposta = new System.Windows.Forms.TextBox();
+            this.txtTelefon = new System.Windows.Forms.TextBox();
+            this.txtUyeAdi = new System.Windows.Forms.TextBox();
+            this.txtUyeSoyadi = new System.Windows.Forms.TextBox();
+            this.txtAdresler = new System.Windows.Forms.TextBox();
+            this.btnEkle = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblEposta = new System.Windows.Forms.Label();
+            this.lblTelefon = new System.Windows.Forms.Label();
+            this.lblUyeAdi = new System.Windows.Forms.Label();
+            this.lblUyeSoyadi = new System.Windows.Forms.Label();
+            this.lblAdresler = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(130, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(132, 20);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Üye Bilgileri Ekle";
+
+            // 
+            // lblEposta
+            // 
+            this.lblEposta.AutoSize = true;
+            this.lblEposta.Location = new System.Drawing.Point(50, 60);
+            this.lblEposta.Name = "lblEposta";
+            this.lblEposta.Size = new System.Drawing.Size(74, 13);
+            this.lblEposta.TabIndex = 7;
+            this.lblEposta.Text = "E-posta Adresi";
+
+            // 
+            // txtEposta
+            // 
+            this.txtEposta.Location = new System.Drawing.Point(130, 60);
+            this.txtEposta.Name = "txtEposta";
+            this.txtEposta.Size = new System.Drawing.Size(200, 20);
+            this.txtEposta.TabIndex = 0;
+
+            // 
+            // lblTelefon
+            // 
+            this.lblTelefon.AutoSize = true;
+            this.lblTelefon.Location = new System.Drawing.Point(50, 100);
+            this.lblTelefon.Name = "lblTelefon";
+            this.lblTelefon.Size = new System.Drawing.Size(76, 13);
+            this.lblTelefon.TabIndex = 8;
+            this.lblTelefon.Text = "Telefon Numarası";
+
+            // 
+            // txtTelefon
+            // 
+            this.txtTelefon.Location = new System.Drawing.Point(130, 100);
+            this.txtTelefon.Name = "txtTelefon";
+            this.txtTelefon.Size = new System.Drawing.Size(200, 20);
+            this.txtTelefon.TabIndex = 1;
+
+            // 
+            // lblUyeAdi
+            // 
+            this.lblUyeAdi.AutoSize = true;
+            this.lblUyeAdi.Location = new System.Drawing.Point(50, 140);
+            this.lblUyeAdi.Name = "lblUyeAdi";
+            this.lblUyeAdi.Size = new System.Drawing.Size(55, 13);
+            this.lblUyeAdi.TabIndex = 9;
+            this.lblUyeAdi.Text = "Üye Adı";
+
+            // 
+            // txtUyeAdi
+            // 
+            this.txtUyeAdi.Location = new System.Drawing.Point(130, 140);
+            this.txtUyeAdi.Name = "txtUyeAdi";
+            this.txtUyeAdi.Size = new System.Drawing.Size(200, 20);
+            this.txtUyeAdi.TabIndex = 2;
+
+            // 
+            // lblUyeSoyadi
+            // 
+            this.lblUyeSoyadi.AutoSize = true;
+            this.lblUyeSoyadi.Location = new System.Drawing.Point(50, 180);
+            this.lblUyeSoyadi.Name = "lblUyeSoyadi";
+            this.lblUyeSoyadi.Size = new System.Drawing.Size(71, 13);
+            this.lblUyeSoyadi.TabIndex = 10;
+            this.lblUyeSoyadi.Text = "Üye Soyadı";
+
+            // 
+            // txtUyeSoyadi
+            // 
+            this.txtUyeSoyadi.Location = new System.Drawing.Point(130, 180);
+            this.txtUyeSoyadi.Name = "txtUyeSoyadi";
+            this.txtUyeSoyadi.Size = new System.Drawing.Size(200, 20);
+            this.txtUyeSoyadi.TabIndex = 3;
+
+            // 
+            // lblAdresler
+            // 
+            this.lblAdresler.AutoSize = true;
+            this.lblAdresler.Location = new System.Drawing.Point(50, 220);
+            this.lblAdresler.Name = "lblAdresler";
+            this.lblAdresler.Size = new System.Drawing.Size(43, 13);
+            this.lblAdresler.TabIndex = 11;
+            this.lblAdresler.Text = "Adresler";
+
+            // 
+            // txtAdresler
+            // 
+            this.txtAdresler.Location = new System.Drawing.Point(130, 220);
+            this.txtAdresler.Name = "txtAdresler";
+            this.txtAdresler.Size = new System.Drawing.Size(200, 20);
+            this.txtAdresler.TabIndex = 4;
+
+            // 
+            // btnEkle
+            // 
+            this.btnEkle.Location = new System.Drawing.Point(130, 260);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(200, 30);
+            this.btnEkle.TabIndex = 5;
+            this.btnEkle.Text = "Veri Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
+
+            // 
+            // Form1
+            // 
+            this.ClientSize = new System.Drawing.Size(384, 311);
+            this.Controls.Add(this.lblAdresler);
+            this.Controls.Add(this.lblUyeSoyadi);
+            this.Controls.Add(this.lblUyeAdi);
+            this.Controls.Add(this.lblTelefon);
+            this.Controls.Add(this.lblEposta);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.btnEkle);
+            this.Controls.Add(this.txtAdresler);
+            this.Controls.Add(this.txtUyeSoyadi);
+            this.Controls.Add(this.txtUyeAdi);
+            this.Controls.Add(this.txtTelefon);
+            this.Controls.Add(this.txtEposta);
+            this.Name = "Form1";
+            this.Text = "Üye Ekleme";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox txtEposta;
+        private System.Windows.Forms.TextBox txtTelefon;
+        private System.Windows.Forms.TextBox txtUyeAdi;
+        private System.Windows.Forms.TextBox txtUyeSoyadi;
+        private System.Windows.Forms.TextBox txtAdresler;
+        private System.Windows.Forms.Button btnEkle;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblEposta;
+        private System.Windows.Forms.Label lblTelefon;
+        private System.Windows.Forms.Label lblUyeAdi;
+        private System.Windows.Forms.Label lblUyeSoyadi;
+        private System.Windows.Forms.Label lblAdresler;
+    }
+}
+
+
+
+using System;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        private string connectionString = "Server=localhost; Database=library; Integrated Security=True;";
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kullanıcıdan verileri al
+                string eposta = txtEposta.Text;
+                string telefon = txtTelefon.Text;
+                string uyeAdi = txtUyeAdi.Text;
+                string uyeSoyadi = txtUyeSoyadi.Text;
+                string adresler = txtAdresler.Text;
+
+                // Veritabanına bağlan
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    string query = "INSERT INTO uyeler (eposta, telefon, uyeAdi, uyeSoyadi, adresler) VALUES (@eposta, @telefon, @uyeAdi, @uyeSoyadi, @adresler)";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        // Parametreleri ekle
+                        cmd.Parameters.AddWithValue("@eposta", eposta);
+                        cmd.Parameters.AddWithValue("@telefon", telefon);
+                        cmd.Parameters.AddWithValue("@uyeAdi", uyeAdi);
+                        cmd.Parameters.AddWithValue("@uyeSoyadi", uyeSoyadi);
+                        cmd.Parameters.AddWithValue("@adresler", adresler);
+
+                        // Veriyi ekle
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                MessageBox.Show("Veri başarıyla eklendi!");
+                // Verileri temizle
+                txtEposta.Clear();
+                txtTelefon.Clear();
+                txtUyeAdi.Clear();
+                txtUyeSoyadi.Clear();
+                txtAdresler.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu: " + ex.Message);
+            }
+        }
+    }
+}
