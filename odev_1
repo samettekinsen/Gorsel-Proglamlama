@@ -266,3 +266,29 @@ namespace WindowsFormsApp2
         }
     }
 }
+
+
+-- library adında bir veritabanı oluştur (eğer mevcut değilse)
+IF NOT EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = 'library')
+BEGIN
+    CREATE DATABASE library;
+END
+GO
+
+-- library veritabanını kullan
+USE library;
+GO
+
+-- uyeler adında bir tablo oluştur
+CREATE TABLE uyeler (
+    uyeID INT IDENTITY(1,1) PRIMARY KEY, -- Otomatik artan birincil anahtar
+    eposta NVARCHAR(255) UNIQUE,         -- E-posta adresi, benzersiz olmalı
+    telefon NVARCHAR(50),                 -- Telefon numarası
+    uyeAdi NVARCHAR(100),                 -- Üye adı
+    uyeSoyadi NVARCHAR(100),              -- Üye soyadı
+    adresler NVARCHAR(MAX)                -- Üye adresi (çok satırlı olabilir)
+);
+GO
+
+
+
